@@ -74,10 +74,10 @@ public class MenuConsole {
     private int leerOpcionValida() {
         try {
             int valor = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer
+            scanner.nextLine();
             return valor;
         } catch (InputMismatchException e) {
-            scanner.nextLine(); // Limpiar el buffer con el error
+            scanner.nextLine();
             System.out.println("[Error de Validación] Debe ingresar un número entero.");
             return -1;
         }

@@ -56,10 +56,9 @@ public class MenuConsole {
             switch (opcion) {
                 case 2:
                     System.out.println("Ejecutando: Configurar recordatorios...");
-                    // AQUI CUMPLES EL CRITERIO "TEST": Instancias tu POJO
-                    // Recordatorio rec = new Recordatorio(1, "Sacar basura", "Orgánica", ...);
+
                     break;
-                // Implementar los demás casos...
+
                 case 5:
                     System.out.println("Regresando...");
                     break;
@@ -69,9 +68,9 @@ public class MenuConsole {
         } while (opcion != 5);
     }
 
-    // Métodos para menuAdministrador() y menuRecolector() irían aquí...
 
-    //validaciones
+
+
     private int leerOpcionValida() {
         try {
             int valor = scanner.nextInt();

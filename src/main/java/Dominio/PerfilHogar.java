@@ -20,7 +20,7 @@ public class PerfilHogar {
     public String getTelefono(){
         return telefono;
     }
-    //Setters
+    //Set
     public void setDireccionDomiciliaria(String direccionDomiciliaria){
         this.direccionDomiciliaria = direccionDomiciliaria;
     }

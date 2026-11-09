@@ -51,7 +51,7 @@ public class Validador {
         }
     }
 
-    //4to. Validar contrasenia
+    //4to. Validar contraseña
     public boolean validarContrasenia(String contrasenia){
         String regex ="^.{8,16}$";
 

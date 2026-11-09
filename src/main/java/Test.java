@@ -11,17 +11,17 @@ public class Test {
         System.out.println("   TEST DE INSTANCIACIÓN DE POJOS (DOMINIO)       ");
         System.out.println("--------------------------------------------------");
 
-        // Prueba: Módulo Autenticación y Roles
+
         UsuarioHogar testUsuario = new UsuarioHogar("kevin_galeas1", "Kevin Galeas", "kgaleas@uce.edu.ec", "clavesitaindesifrable123");
         System.out.println(testUsuario.toString());
         System.out.println("--------------------------------------------------");
 
-        // Prueba: Módulo Hogar y Alertas
+
         Recordatorio testRecordatorio = new Recordatorio(1, "Separar plásticos", "Reciclaje", LocalDateTime.now(), "Semanal");
         System.out.println(testRecordatorio.toString());
         System.out.println("--------------------------------------------------");
 
-        // Prueba: Módulo Operativo Recolector
+
         RutaRecoleccion testRuta = new RutaRecoleccion(101, "Sector Norte", "Lat:-0.18, Lng:-78.48", "Lunes y Jueves", "08:00 AM");
         System.out.println(testRuta.toString());
         System.out.println("--------------------------------------------------");

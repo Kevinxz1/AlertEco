@@ -1,7 +1,7 @@
 package Dominio;
 
 public class Administrador extends Usuario{
-
+    //SIN PARAMETROS
     public Administrador(){
         super();
     }

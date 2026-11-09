@@ -38,6 +38,6 @@ public class PuntoReciclaje {
 
     @Override
     public String toString() {
-        return "Punto: " + nombrePunto + " | Estado: " + estadoContenedor;
+        return "Punto: " + nombrePunto + " | estado: " + estadoContenedor;
     }
 }

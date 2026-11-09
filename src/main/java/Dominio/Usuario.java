@@ -33,7 +33,7 @@ public abstract class Usuario {
         return contrasenia;
     }
 
-    //SET
+    //SeT
 
     public void setUsuario(String usuario){
         this.usuario = usuario;

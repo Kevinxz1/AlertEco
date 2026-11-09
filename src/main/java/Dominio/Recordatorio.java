@@ -21,7 +21,7 @@ public class Recordatorio {
         this.frecuencia = frecuencia;
     }
 
-    // Getters
+    // Get
     public int getNumero(){
         return numero;
     }

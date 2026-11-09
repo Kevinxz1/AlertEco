@@ -21,7 +21,7 @@ public class MenuConsole {
         do {
             System.out.println("Sistema Alert Eco");
             System.out.println("Seleccione su rol:");
-            System.out.println("Opcion: ");
+            System.out.println("Opcion : ");
             System.out.println("1. Entrar como Usuario del Hogar");
             System.out.println("2. Entrar como Administrador");
             System.out.println("3. Entrar como Recolector");

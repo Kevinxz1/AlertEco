@@ -16,7 +16,7 @@ public class ConsejoAmbiental {
         this.categoria = categoria;
     }
 
-    //Getters
+    //Get
     public String getTitulo(){
         return titulo;
     }

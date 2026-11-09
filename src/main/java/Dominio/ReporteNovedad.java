@@ -16,7 +16,7 @@ public class ReporteNovedad {
         this.fechaReporte = fechaReporte;
     }
 
-    //Getters
+    //Get
     public String getDescripcion(){
         return descripcion;
     }

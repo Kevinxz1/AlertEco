@@ -19,7 +19,7 @@ public class RutaRecoleccion {
         this.horaEstimada = horaEstimada;
     }
 
-    //Getters
+    //Get
     public int getIdRuta(){
         return idRuta;
     }
@@ -34,7 +34,7 @@ public class RutaRecoleccion {
     public String getHoraEstimada(){
         return horaEstimada;
     }
-    //Setters
+    //Set
     public void setIdRuta(int idRuta){
         this.idRuta = idRuta;
     }

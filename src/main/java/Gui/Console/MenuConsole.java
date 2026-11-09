@@ -1,13 +1,19 @@
 package Gui.Console;
 
+import Dominio.UsuarioHogar;
+import Util.Validador;
+
+import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MenuConsole {
     private Scanner scanner;
+    private Validador validador;
 
     public MenuConsole() {
         this.scanner = new Scanner(System.in);
+        this.validador = new Validador();
     }
 
     public void iniciar() {
@@ -15,7 +21,7 @@ public class MenuConsole {
         do {
             System.out.println("Sistema Alert Eco");
             System.out.println("Seleccione su rol:");
-            System.out.print("Opcion: ");
+            System.out.println("Opcion: ");
             System.out.println("1. Entrar como Usuario del Hogar");
             System.out.println("2. Entrar como Administrador");
             System.out.println("3. Entrar como Recolector");
@@ -59,6 +65,7 @@ public class MenuConsole {
             switch (opcion) {
                 case 1:
                     System.out.println("Ejecutando: Gestionar cuenta...");
+                    registrarUsuarioHogar();
                     break;
                 case 2:
                     System.out.println("Ejecutando: Configurar recordatorios...");
@@ -147,6 +154,60 @@ public class MenuConsole {
             }
         } while (opcion != 5);
     }
+
+    //Met y Lógica de validacioon
+    private void registrarUsuarioHogar(){
+        System.out.println("------------------------------------");
+        System.out.println("REGISTRO DEL NUEVO USUARIO DEL HOGAR");
+        System.out.println("------------------------------------");
+
+        String nombreUsuario = "";
+        String nombreCompleto = "";
+        String correo = "";
+        String contrasenia = "";
+
+        //1fst solicitar y valdiar usuario :)
+        boolean usuarioValido = false;
+        do {
+            System.out.println("Ingrese un nombre de usuario, sin caracteres especiales.");
+            nombreUsuario = scanner.nextLine();
+            usuarioValido = validador.validarUsuario(nombreUsuario);
+        }while(!usuarioValido);
+
+        //2nd solicitar y validar nombre y apellido:
+        boolean nombreValido = false;
+        do {
+            System.out.println("Ingrese un Nombre y Apelledio, (ambos deben empezar con mayuscula y estar separados por un espacio");
+            nombreCompleto = scanner.nextLine();
+            nombreValido = validador.validarNombre(nombreCompleto);
+        }while(!nombreValido);
+
+        //3rd solicitar y validar correo
+        boolean correoValido = false;
+        do{
+            System.out.println("Ingrese su correo electronico");
+            correo = scanner.nextLine();
+            correoValido = validador.validarCorreo(correo);
+        }while(!correoValido);
+
+
+        //4th pedimos y validamos ontraseña
+        boolean contraValidad = false;
+        do{
+            System.out.println("Ingrese una contraseña, de 8 a 16 caracteres ");
+            contrasenia = scanner.nextLine();;
+            contraValidad = validador.validarContrasenia(contrasenia);
+        }while(!contraValidad);
+
+        //Instanciamos el objeto con datos ya validados
+        UsuarioHogar nuevoUsuario = new UsuarioHogar(nombreUsuario, nombreCompleto, correo, contrasenia);
+
+        System.out.println("Registro completado con exito :)");
+        System.out.println("Bienvenido, " + nuevoUsuario.getNombre()+ "Su Cuenta es: " + nuevoUsuario.getCorreo() + ") se ha creado con exito");
+    }
+
+
+
 
     private int leerOpcionValida() {
         try {

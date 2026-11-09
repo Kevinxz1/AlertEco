@@ -43,13 +43,14 @@ public class MenuConsole {
     private void menuUsuarioHogar() {
         int opcion = 0;
         do {
-            System.out.println("\n--- MENÚ USUARIO DEL HOGAR ---");
+            System.out.println(" MENÚ USUARIO DEL HOGAR ");
+            System.out.print("Seleccione una acción: ");
             System.out.println("1. Gestionar cuenta");
             System.out.println("2. Configurar recordatorios");
             System.out.println("3. Consultar guía de reciclaje");
             System.out.println("4. Ver historial de reciclaje");
             System.out.println("5. Volver al menú principal");
-            System.out.print("Seleccione una acción: ");
+
 
             opcion = leerOpcionValida();
 

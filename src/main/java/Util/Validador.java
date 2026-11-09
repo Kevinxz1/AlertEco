@@ -7,7 +7,7 @@ public class Validador {
 
     //1ero. VALIDACION DE USUARIO, solo letras, numeros, y guiones :)
     public boolean validarUsuario(String usuario){
-        String regex = "^[a-zA-ZO-9]+$";
+        String regex = "^[a-zA-Z0-9]+$";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(usuario);
@@ -62,6 +62,20 @@ public class Validador {
             return true;
         }else{
             System.out.println("Error!!!!, la contraseña no tiene de 8 a 16 caracteres");
+            return false;
+        }
+    }
+
+    //5to Valdacion de numeros
+    public boolean validarSoloNumeros(String numero) {
+        String regex = "^[0-9]+$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(numero);
+
+        if (matcher.matches()) {
+            return true;
+        } else {
+            System.out.println("Error!; Solo se permiten números.");
             return false;
         }
     }

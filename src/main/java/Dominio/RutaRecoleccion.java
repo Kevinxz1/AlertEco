@@ -7,6 +7,7 @@ public class RutaRecoleccion {
     private String frecuenciaSemanal;
     private String horaEstimada;
 
+    //sin parametros
     public RutaRecoleccion(){
 
     }
@@ -19,12 +20,13 @@ public class RutaRecoleccion {
         this.horaEstimada = horaEstimada;
     }
 
-    //Get
+    // Get
     public int getIdRuta(){
         return idRuta;
     }
     public String getSector(){
-        return sector;}
+        return sector;
+    }
     public String getCoordenadasMapa(){
         return coordenadasMapa;
     }
@@ -34,9 +36,15 @@ public class RutaRecoleccion {
     public String getHoraEstimada(){
         return horaEstimada;
     }
-    //Set
+
+    //Setters
     public void setIdRuta(int idRuta){
-        this.idRuta = idRuta;
+        // Validación interna
+        if (idRuta > 0) {
+            this.idRuta = idRuta;
+        } else {
+            System.out.println("Error: El ID de la ruta debe ser positivo.");
+        }
     }
     public void setSector(String sector){
         this.sector = sector;

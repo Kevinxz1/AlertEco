@@ -6,20 +6,19 @@ public abstract class Usuario {
     private String correo;
     private String contrasenia;
 
+    //sin parametros
     public Usuario(){
-        this.usuario = "Sin Usuario";
-        this.nombre = "sin nombre";
-        this.correo = "sin correo";
-        this.contrasenia = "sin constraseña";
+
     }
-    public Usuario(String usuario, String nombre, String correo, String contrasenia){
+
+    public Usuario(String usuario, String nombre, String correo, String contrasenia) {
         this.usuario = usuario;
         this.nombre = nombre;
         this.correo = correo;
         this.contrasenia = contrasenia;
     }
 
-    //GETS
+    // Get
     public String getUsuario(){
         return usuario;
     }
@@ -33,24 +32,31 @@ public abstract class Usuario {
         return contrasenia;
     }
 
-    //SeT
-
+    //Set
     public void setUsuario(String usuario){
-        this.usuario = usuario;
+        if (usuario != null && !usuario.trim().isEmpty()) {
+            this.usuario = usuario;
+        } else {
+            System.out.println("Error: El usuario no puede estar vacío.");
+        }
     }
-    public void setNombre (String nombre){
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
-    public void setCorreo (String correo){
+    public void setCorreo(String correo){
         this.correo = correo;
     }
     public void setContrasenia(String contrasenia){
-        this.contrasenia = contrasenia;
+        // Validación interna
+        if (contrasenia.length() >= 8) {
+            this.contrasenia = contrasenia;
+        } else {
+            System.out.println("Error: La contraseña debe tener al menos 8 caracteres.");
+        }
     }
 
     @Override
-    public String toString(){
-            return "Datos del usuario: \n" + "Nombre: " + nombre + "\n" + "Usuarionombre " + usuario + "\n" + "Correo: " + correo;
+    public String toString() {
+        return "Datos del Usuario: \n- Nombre: " + nombre + "\n- Username: " + usuario + "\n- Correo: " + correo;
     }
-
 }

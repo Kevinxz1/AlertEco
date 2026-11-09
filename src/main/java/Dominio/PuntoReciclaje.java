@@ -5,6 +5,7 @@ public class PuntoReciclaje {
     private String nombrePunto;
     private String estadoContenedor;
 
+    //sin parametros
     public PuntoReciclaje(){
 
     }
@@ -15,7 +16,7 @@ public class PuntoReciclaje {
         this.estadoContenedor = estadoContenedor;
     }
 
-    // Getters
+    // Get
     public String getUbicacionGPS(){
         return ubicacionGPS;
     }
@@ -25,6 +26,7 @@ public class PuntoReciclaje {
     public String getEstadoContenedor(){
         return estadoContenedor;
     }
+
     //Setters
     public void setUbicacionGPS(String ubicacionGPS){
         this.ubicacionGPS = ubicacionGPS;
@@ -33,11 +35,16 @@ public class PuntoReciclaje {
         this.nombrePunto = nombrePunto;
     }
     public void setEstadoContenedor(String estadoContenedor){
-        this.estadoContenedor = estadoContenedor;
+        // Validación interna
+        if (estadoContenedor != null && !estadoContenedor.trim().isEmpty()) {
+            this.estadoContenedor = estadoContenedor;
+        } else {
+            System.out.println("Error: El estado del contenedor no puede estar vacío.");
+        }
     }
 
     @Override
     public String toString() {
-        return "Punto: " + nombrePunto + " | estado: " + estadoContenedor;
+        return "Punto: " + nombrePunto + " | Estado: " + estadoContenedor;
     }
 }

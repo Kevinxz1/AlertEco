@@ -7,7 +7,7 @@ public class Validador {
 
     //1ero. VALIDACION DE USUARIO, solo letras, numeros, y guiones :)
     public boolean validarUsuario(String usuario){
-        String regex = "^[a-zA-Z0-9]+$";
+        String regex = "^[a-zA-Z0-9-_]+$";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(usuario);
@@ -55,7 +55,8 @@ public class Validador {
     public boolean validarContrasenia(String contrasenia){
         String regex ="^.{8,16}$";
 
-        Pattern pattern = Pattern.compile(contrasenia);
+        // CORRECCIÓN: Se cambia 'contrasenia' por 'regex'
+        Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(contrasenia);
 
         if(matcher.matches()){

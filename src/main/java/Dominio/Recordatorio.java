@@ -40,7 +40,12 @@ public class Recordatorio {
 
     //Setters
     public void setNumero(int numero){
-        this.numero = numero;
+        // Validación interna
+        if (numero > 0) {
+            this.numero = numero;
+        } else {
+            System.out.println("Error: El número de recordatorio debe ser mayor a 0.");
+        }
     }
     public void setTituloRecordatorio(String tituloRecordatorio){
         this.tituloRecordatorio = tituloRecordatorio;
@@ -49,7 +54,8 @@ public class Recordatorio {
         this.categoria = categoria;
     }
     public void setFechaHora(LocalDateTime fechaHora){
-        this.fechaHora = fechaHora;}
+        this.fechaHora = fechaHora;
+    }
     public void setFrecuencia(String frecuencia){
         this.frecuencia = frecuencia;
     }

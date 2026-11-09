@@ -21,7 +21,7 @@ public class Recordatorio {
         this.frecuencia = frecuencia;
     }
 
-    // Get
+    //Get
     public int getNumero(){
         return numero;
     }
@@ -38,7 +38,7 @@ public class Recordatorio {
         return frecuencia;
     }
 
-    //Setters
+    //Set
     public void setNumero(int numero){
         // Validación interna
         if (numero > 0) {

@@ -13,7 +13,7 @@ public class Menu {
         this.scanner = new Scanner(System.in);
         this.menuHogar = new SubMenuUsuarioHogar(scanner);
         this.menuAdministrador = new SubMenuAdministrador(scanner);
-        this.menuRecolector = new SubMenuRecolector(scanner); // Asumiendo que la tienes creada
+        this.menuRecolector = new SubMenuRecolector(scanner);
     }
 
     public void iniciar() {
@@ -52,11 +52,11 @@ public class Menu {
     private int leerOpcionValida() {
         try {
             int valor = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer
+            scanner.nextLine();
             return valor;
         } catch (InputMismatchException e) {
-            scanner.nextLine(); // Limpiar el buffer
-            System.out.println("[Error] Debe ingresar un número entero.");
+            scanner.nextLine();
+            System.out.println("Error!, Debe ingresar un número entero.");
             return -1;
         }
     }

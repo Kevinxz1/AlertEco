@@ -13,7 +13,7 @@ public class PerfilHogar {
         this.telefono = telefono;
     }
 
-    // Getters
+    //Get
     public String getDireccionDomiciliaria(){
         return direccionDomiciliaria;
     }

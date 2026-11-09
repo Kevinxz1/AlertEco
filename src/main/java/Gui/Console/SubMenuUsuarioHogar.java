@@ -29,7 +29,7 @@ public class SubMenuUsuarioHogar {
             switch (opcion) {
                 case 1:
                     System.out.println("Ejecutando: Gestionar cuenta...");
-                    registroDatos.registrarUsuarioHogar(); // CORRECCIÓN: Llamamos al objeto registroDatos
+                    registroDatos.registrarUsuarioHogar();
                     break;
                 case 2:
                     System.out.println("Ejecutando: Configurar recordatorios...");

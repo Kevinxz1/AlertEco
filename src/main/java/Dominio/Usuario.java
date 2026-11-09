@@ -18,7 +18,7 @@ public abstract class Usuario {
         this.contrasenia = contrasenia;
     }
 
-    // Get
+    //Get
     public String getUsuario(){
         return usuario;
     }
@@ -47,7 +47,7 @@ public abstract class Usuario {
         this.correo = correo;
     }
     public void setContrasenia(String contrasenia){
-        // Validación interna
+        //Validación interna
         if (contrasenia.length() >= 8) {
             this.contrasenia = contrasenia;
         } else {

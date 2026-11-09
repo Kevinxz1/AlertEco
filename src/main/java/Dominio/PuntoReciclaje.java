@@ -16,7 +16,7 @@ public class PuntoReciclaje {
         this.estadoContenedor = estadoContenedor;
     }
 
-    // Get
+    //Get
     public String getUbicacionGPS(){
         return ubicacionGPS;
     }
@@ -35,7 +35,7 @@ public class PuntoReciclaje {
         this.nombrePunto = nombrePunto;
     }
     public void setEstadoContenedor(String estadoContenedor){
-        // Validación interna
+        //Validación interna
         if (estadoContenedor != null && !estadoContenedor.trim().isEmpty()) {
             this.estadoContenedor = estadoContenedor;
         } else {

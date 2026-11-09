@@ -20,7 +20,7 @@ public class RutaRecoleccion {
         this.horaEstimada = horaEstimada;
     }
 
-    // Get
+    //Get
     public int getIdRuta(){
         return idRuta;
     }

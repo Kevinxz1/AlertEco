@@ -26,7 +26,7 @@ public class ConsejoAmbiental {
     public String getCategoria(){
         return categoria;
     }
-    //Setters
+    //Set
     public void setTitulo(String titulo){
         this.titulo = titulo;
     }

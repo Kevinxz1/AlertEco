@@ -1,4 +1,4 @@
-import Gui.Console.MenuConsole;
+import Gui.Console.Menu;
 
 public class main {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class main {
         Test pruebas = new Test();
         pruebas.ejecutarPruebas();
 
-        MenuConsole menu = new MenuConsole();
+        Menu menu = new Menu();
         menu.iniciar();
 
     }

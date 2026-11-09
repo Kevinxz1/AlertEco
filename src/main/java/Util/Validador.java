@@ -55,7 +55,6 @@ public class Validador {
     public boolean validarContrasenia(String contrasenia){
         String regex ="^.{8,16}$";
 
-        // CORRECCIÓN: Se cambia 'contrasenia' por 'regex'
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(contrasenia);
 

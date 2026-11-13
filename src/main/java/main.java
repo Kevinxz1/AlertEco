@@ -26,7 +26,7 @@ public class main {
         System.out.println("==================================================");
         System.out.println("       FIN DE TEST - INICIANDO SISTEMA         ");
         System.out.println("==================================================");
-    //AQUI INICIA EL MENU
+
         Menu menu = new Menu();
         menu.iniciar();
     }

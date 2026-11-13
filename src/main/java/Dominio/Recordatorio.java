@@ -44,7 +44,7 @@ public class Recordatorio {
         if (numero > 0) {
             this.numero = numero;
         } else {
-            System.out.println("Error: El número de recordatorio debe ser mayor a 0.");
+            System.out.println("Error!: El número de recordatorio debe ser mayor a 0.");
         }
     }
     public void setTituloRecordatorio(String tituloRecordatorio){

@@ -51,7 +51,7 @@ public class UsuarioHogar extends Usuario {
             System.out.println("Error: La cantidad reciclada no puede ser negativa.");
         }
     }
-
+    //
     private void verificarMeta() {
         if (this.cantidadRecicladaKg >= this.metaReciclajeKg) {
             this.metaCumplida = true;

@@ -21,7 +21,7 @@ public class RecordatorioTest {
         recordatorioTest = new Recordatorio(1, "Separar plasticos", "Reciclaje", fechaPrueba, "Semanal");
     }
 
-    @Test
+    @Test//
     @Order(1)
     public void testConstructorYGetters(){
         assertNotNull(recordatorioTest);

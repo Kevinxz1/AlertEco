@@ -16,7 +16,7 @@ public class PuntoReciclajeTest {
     public void setUp(){
         puntoTest = new PuntoReciclaje("Lat:-19, Lng:-78.49", "Contenedor Parque Bicentenario", "Activo - Medio Lleno");
     }
-    @Test
+    @Test //1
     @Order(1)
     public void testConstructoresYGetters(){
         assertNotNull(puntoTest);

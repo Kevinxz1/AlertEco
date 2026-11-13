@@ -25,7 +25,7 @@ public class ReporteNovedad {
     }
     public LocalDateTime getFechaReporte(){
         return fechaReporte;
-    }
+    }//
     //Setters
     public void setDescripcion(String descripcion){
         this.descripcion = descripcion;

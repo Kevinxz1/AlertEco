@@ -16,7 +16,7 @@ public class UsuarioHogarTest {
     public void setUp() {
         usuarioTest = new UsuarioHogar("kgaleas", "Kevin Galeas", "kgaleas@uce.edu.ec", "Clave123", 10.0);
     }
-
+    //
     @Test
     @Order(1)
     public void testConstructorYGetters() {

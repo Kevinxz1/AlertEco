@@ -16,7 +16,7 @@ public class RutaRecoleccionesTest {
         rutaTest = new RutaRecoleccion(101, "Sector Norte", "Lat:-0.18, Lang:-78.48", "Lunes y Jueves", "8:00 AM");
 
     }
-
+    //
     @Test
     @Order(1)
     public void testConstructorYGetters(){

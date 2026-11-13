@@ -8,7 +8,7 @@ public class main {
     public static void main(String[] args) {
 
         System.out.println("==================================================");
-        System.out.println("   TEST DE MÉTODOS Y POJOS (DOMINIO)              ");
+        System.out.println("   TEST DE MÉTODOS Y POJOS ( package DOMINIO)              ");
         System.out.println("==================================================");
 
         TestUsuarioHogar pruebaUsuario = new TestUsuarioHogar();

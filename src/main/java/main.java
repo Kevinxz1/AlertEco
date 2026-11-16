@@ -1,7 +1,6 @@
 import Gui.Console.Menu;
 import test.TestPuntoReciclaje;
 import test.TestRecordatorio;
-import test.TestRutaRecoleccion;
 import test.TestUsuarioHogar;
 
 public class main {

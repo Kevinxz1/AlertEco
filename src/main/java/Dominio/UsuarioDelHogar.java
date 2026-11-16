@@ -1,23 +1,23 @@
 package Dominio;
 
-public class UsuarioHogar extends Usuario {
+public class UsuarioDelHogar extends Usuario {
 
     private double metaReciclajeKg;
     private double cantidadRecicladaKg;
     private boolean metaCumplida;
 
-    public UsuarioHogar() {
+    public UsuarioDelHogar() {
         super();
     }
 
-    public UsuarioHogar(String usuario, String nombre, String correo, String contrasenia) {
+    public UsuarioDelHogar(String usuario, String nombre, String correo, String contrasenia) {
         super(usuario, nombre, correo, contrasenia);
         this.metaReciclajeKg = 10.0;
         this.cantidadRecicladaKg = 0.0;
         this.metaCumplida = false;
     }
 
-    public UsuarioHogar(String usuario, String nombre, String correo, String contrasenia, double metaReciclajeKg) {
+    public UsuarioDelHogar(String usuario, String nombre, String correo, String contrasenia, double metaReciclajeKg) {
         super(usuario, nombre, correo, contrasenia);
         this.metaReciclajeKg = metaReciclajeKg;
         this.cantidadRecicladaKg = 0.0;

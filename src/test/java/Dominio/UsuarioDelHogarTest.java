@@ -1,5 +1,4 @@
 package Dominio;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -8,13 +7,13 @@ import org.junit.jupiter.api.TestMethodOrder;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class UsuarioHogarTest {
+public class UsuarioDelHogarTest {
 
-    private UsuarioHogar usuarioTest;
+    private UsuarioDelHogar usuarioTest;
 
     @BeforeEach
     public void setUp() {
-        usuarioTest = new UsuarioHogar("kgaleas", "Kevin Galeas", "kgaleas@uce.edu.ec", "Clave123", 10.0);
+        usuarioTest = new UsuarioDelHogar("kgaleas", "Kevin Galeas", "kgaleas@uce.edu.ec", "Clave123", 10.0);
     }
     //
     @Test

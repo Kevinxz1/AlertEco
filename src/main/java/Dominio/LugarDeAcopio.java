@@ -1,16 +1,16 @@
 package Dominio;
 
-public class PuntoReciclaje {
+public class LugarDeAcopio {
     private String ubicacionGPS;
     private String nombrePunto;
     private String estadoContenedor;
 
     //sin parametros
-    public PuntoReciclaje(){
+    public LugarDeAcopio(){
 
     }
 
-    public PuntoReciclaje(String ubicacionGPS, String nombrePunto, String estadoContenedor) {
+    public LugarDeAcopio(String ubicacionGPS, String nombrePunto, String estadoContenedor) {
         this.ubicacionGPS = ubicacionGPS;
         this.nombrePunto = nombrePunto;
         this.estadoContenedor = estadoContenedor;

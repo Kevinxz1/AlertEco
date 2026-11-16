@@ -1,16 +1,16 @@
 package Dominio;
 import java.time.LocalDateTime;
 
-public class ReporteNovedad {
+public class ReporteDePuntoCritico {
     private String descripcion;
     private String estadoRuta;
     private LocalDateTime fechaReporte;
 
-    public ReporteNovedad(){
+    public ReporteDePuntoCritico(){
 
     }
 
-    public ReporteNovedad(String descripcion, String estadoRuta, LocalDateTime fechaReporte) {
+    public ReporteDePuntoCritico(String descripcion, String estadoRuta, LocalDateTime fechaReporte) {
         this.descripcion = descripcion;
         this.estadoRuta = estadoRuta;
         this.fechaReporte = fechaReporte;

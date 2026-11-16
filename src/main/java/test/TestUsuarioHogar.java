@@ -1,11 +1,11 @@
 package test;
 
-import Dominio.UsuarioHogar;
+import Dominio.UsuarioDelHogar;
 
 public class TestUsuarioHogar {
     public void probarUsuarioHogar() {
         System.out.println("TEST CLASE: UsuarioHogar");
-        UsuarioHogar testUsuario = new UsuarioHogar("kevin_galeas", "Kevin Galeas", "kgaleas@uce.edu.ec", "Secreta123");
+        UsuarioDelHogar testUsuario = new UsuarioDelHogar("kevin_galeas", "Kevin Galeas", "kgaleas@uce.edu.ec", "Secreta123");
         System.out.println("Estado inicial: " + testUsuario.toString());
 
         System.out.println("Ejecutando Set...");

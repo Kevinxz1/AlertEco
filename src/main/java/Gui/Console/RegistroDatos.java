@@ -1,6 +1,6 @@
 package Gui.Console;
 
-import Dominio.UsuarioHogar;
+import Dominio.UsuarioDelHogar;
 import Util.Validador;
 import java.util.Scanner;
 
@@ -61,7 +61,7 @@ public class RegistroDatos {
 
         double metaKg = Double.parseDouble(metaTexto);
 
-        UsuarioHogar nuevoUsuario = new UsuarioHogar(nombreUsuario, nombreCompleto, correo, contrasenia, metaKg);
+        UsuarioDelHogar nuevoUsuario = new UsuarioDelHogar(nombreUsuario, nombreCompleto, correo, contrasenia, metaKg);
 
         System.out.println("Registro completado con exito :)");
         System.out.println("Bienvenido, " + nuevoUsuario.getNombre() + " Su Cuenta es: (" + nuevoUsuario.getCorreo() + ") con una meta de " + nuevoUsuario.getMetaReciclajeKg() + " Kg se ha creado con exito");

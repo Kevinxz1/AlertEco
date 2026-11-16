@@ -8,13 +8,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class PuntoReciclajeTest {
+public class LugarDeAcopioTest {
 
-    private PuntoReciclaje puntoTest;
+    private LugarDeAcopio puntoTest;
 
     @BeforeEach
     public void setUp(){
-        puntoTest = new PuntoReciclaje("Lat:-19, Lng:-78.49", "Contenedor Parque Bicentenario", "Activo - Medio Lleno");
+        puntoTest = new LugarDeAcopio("Lat:-19, Lng:-78.49", "Contenedor Parque Bicentenario", "Activo - Medio Lleno");
     }
     @Test //1
     @Order(1)

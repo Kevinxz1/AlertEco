@@ -1,62 +1,68 @@
 package Dominio;
 
+import java.util.Arrays;
+
 public class UsuarioDelHogar extends Usuario {
 
-    private double metaReciclajeKg;
-    private double cantidadRecicladaKg;
-    private boolean metaCumplida;
+    private EntregaDeReciclaje[] entregasRegistradas;
+    private ReporteDePuntoCritico[] reportesCreados;
+    private Recordatorio[] recordatorios;
 
     public UsuarioDelHogar() {
         super();
     }
 
-    public UsuarioDelHogar(String usuario, String nombre, String correo, String contrasenia) {
-        super(usuario, nombre, correo, contrasenia);
-        this.metaReciclajeKg = 10.0;
-        this.cantidadRecicladaKg = 0.0;
-        this.metaCumplida = false;
+    public UsuarioDelHogar(int idUsuario, String nombresYApellidos, String correoElectronico,
+                           String telefonoDeContacto, String sectorDireccion, String contrasena,
+                           String estadoDeLaCuenta) {
+        super();
+        this.setIdUsuario(idUsuario);
+        this.setNombresYApellidos(nombresYApellidos);
+        this.setCorreoElectronico(correoElectronico);
+        this.setTelefonoDeContacto(telefonoDeContacto);
+        this.setSectorDireccion(sectorDireccion);
+        this.setContrasena(contrasena);
+        this.setEstadoDeLaCuenta(estadoDeLaCuenta);
     }
 
-    public UsuarioDelHogar(String usuario, String nombre, String correo, String contrasenia, double metaReciclajeKg) {
-        super(usuario, nombre, correo, contrasenia);
-        this.metaReciclajeKg = metaReciclajeKg;
-        this.cantidadRecicladaKg = 0.0;
-        this.metaCumplida = false;
+    public UsuarioDelHogar(EntregaDeReciclaje[] entregasRegistradas, ReporteDePuntoCritico[] reportesCreados,
+                           Recordatorio[] recordatorios) {
+        super();
+        this.entregasRegistradas = entregasRegistradas;
+        this.reportesCreados = reportesCreados;
+        this.recordatorios = recordatorios;
     }
 
-    public double getMetaReciclajeKg() {
-        return metaReciclajeKg;
+    public EntregaDeReciclaje[] getEntregasRegistradas() {
+        return entregasRegistradas;
     }
 
-    public double getCantidadRecicladaKg() {
-        return cantidadRecicladaKg;
+    public void setEntregasRegistradas(EntregaDeReciclaje[] entregasRegistradas) {
+        this.entregasRegistradas = entregasRegistradas;
     }
 
-    public boolean isMetaCumplida() {
-        return metaCumplida;
+    public ReporteDePuntoCritico[] getReportesCreados() {
+        return reportesCreados;
     }
 
-    public void setMetaReciclajeKg(double metaReciclajeKg) {
-        if (metaReciclajeKg > 0) {
-            this.metaReciclajeKg = metaReciclajeKg;
-            verificarMeta();
-        }
+    public void setReportesCreados(ReporteDePuntoCritico[] reportesCreados) {
+        this.reportesCreados = reportesCreados;
     }
 
-    public void setCantidadRecicladaKg(double cantidadIngresada) {
-        if (cantidadIngresada >= 0) {
-            this.cantidadRecicladaKg = cantidadIngresada;
-            verificarMeta();
-        } else {
-            System.out.println("Error: La cantidad reciclada no puede ser negativa.");
-        }
+    public Recordatorio[] getRecordatorios() {
+        return recordatorios;
     }
-    //
-    private void verificarMeta() {
-        if (this.cantidadRecicladaKg >= this.metaReciclajeKg) {
-            this.metaCumplida = true;
-        } else {
-            this.metaCumplida = false;
-        }
+
+    public void setRecordatorios(Recordatorio[] recordatorios) {
+        this.recordatorios = recordatorios;
+    }
+
+    @Override
+    public String toString() {
+        return "UsuarioDelHogar{" +
+                "entregasRegistradas=" + Arrays.toString(entregasRegistradas) +
+                ", reportesCreados=" + Arrays.toString(reportesCreados) +
+                ", recordatorios=" + Arrays.toString(recordatorios) +
+                "} " + super.toString();
     }
 }

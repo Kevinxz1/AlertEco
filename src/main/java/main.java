@@ -1,7 +1,7 @@
 import Gui.Console.Menu;
 import test.TestPuntoReciclaje;
 import test.TestRecordatorio;
-import test.TestUsuarioHogar;
+import test.TestUsuarioDelHogar;
 
 public class main {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class main {
         System.out.println("   TEST DE MÉTODOS Y POJOS ( package DOMINIO)              ");
         System.out.println("==================================================");
 
-        TestUsuarioHogar pruebaUsuario = new TestUsuarioHogar();
+        TestUsuarioDelHogar pruebaUsuario = new TestUsuarioDelHogar();
         pruebaUsuario.probarUsuarioHogar();
 
         TestRecordatorio pruebaRecordatorio = new TestRecordatorio();

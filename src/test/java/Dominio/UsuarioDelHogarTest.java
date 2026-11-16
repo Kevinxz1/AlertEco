@@ -1,4 +1,5 @@
 package Dominio;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -13,35 +14,46 @@ public class UsuarioDelHogarTest {
 
     @BeforeEach
     public void setUp() {
-        usuarioTest = new UsuarioDelHogar("kgaleas", "Kevin Galeas", "kgaleas@uce.edu.ec", "Clave123", 10.0);
+        usuarioTest = new UsuarioDelHogar(101, "Kevin Galeas", "kgaleas@uce.edu.ec",
+                "0987654321", "Quito Norte", "Clave123", "Activo");
     }
-    //
+
     @Test
     @Order(1)
-    public void testConstructorYGetters() {
-        assertEquals("kgaleas", usuarioTest.getUsuario());
-        assertEquals("Kevin Galeas", usuarioTest.getNombre());
-        assertEquals("kgaleas@uce.edu.ec", usuarioTest.getCorreo());
-        assertEquals("Clave123", usuarioTest.getContrasenia());
-        assertEquals(10.0, usuarioTest.getMetaReciclajeKg());
-        assertFalse(usuarioTest.isMetaCumplida());
+    public void testConstructorYGettersHeredados() {
+        assertEquals(101, usuarioTest.getIdUsuario());
+        assertEquals("Kevin Galeas", usuarioTest.getNombresYApellidos());
+        assertEquals("kgaleas@uce.edu.ec", usuarioTest.getCorreoElectronico());
+        assertEquals("0987654321", usuarioTest.getTelefonoDeContacto());
+        assertEquals("Quito Norte", usuarioTest.getSectorDireccion());
+        assertEquals("Clave123", usuarioTest.getContrasena());
+        assertEquals("Activo", usuarioTest.getEstadoDeLaCuenta());
     }
 
     @Test
     @Order(2)
-    public void testLogicaDeSettersYMetaCumplida() {
-        usuarioTest.setCantidadRecicladaKg(5.0);
-        assertEquals(5.0, usuarioTest.getCantidadRecicladaKg());
-        assertFalse(usuarioTest.isMetaCumplida());
+    public void testSettersHeredados() {
+        usuarioTest.setNombresYApellidos("Nuevo Nombre");
+        usuarioTest.setEstadoDeLaCuenta("Inactivo");
 
-        usuarioTest.setCantidadRecicladaKg(12.0);
-        assertTrue(usuarioTest.isMetaCumplida());
+        assertEquals("Nuevo Nombre", usuarioTest.getNombresYApellidos());
+        assertEquals("Inactivo", usuarioTest.getEstadoDeLaCuenta());
     }
 
     @Test
     @Order(3)
-    public void testSettersConDatosInvalidos() {
-        usuarioTest.setCantidadRecicladaKg(-5.0);
-        assertEquals(0.0, usuarioTest.getCantidadRecicladaKg());
+    public void testRelacionesDeAgregacion() {
+        EntregaDeReciclaje[] entregas = new EntregaDeReciclaje[2];
+        ReporteDePuntoCritico[] reportes = new ReporteDePuntoCritico[1];
+        Recordatorio[] recordatorios = new Recordatorio[3];
+
+        usuarioTest.setEntregasRegistradas(entregas);
+        usuarioTest.setReportesCreados(reportes);
+        usuarioTest.setRecordatorios(recordatorios);
+
+        assertNotNull(usuarioTest.getEntregasRegistradas());
+        assertNotNull(usuarioTest.getReportesCreados());
+        assertNotNull(usuarioTest.getRecordatorios());
+        assertEquals(2, usuarioTest.getEntregasRegistradas().length);
     }
 }

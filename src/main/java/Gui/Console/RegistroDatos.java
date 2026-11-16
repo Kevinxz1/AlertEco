@@ -18,52 +18,46 @@ public class RegistroDatos {
         System.out.println("REGISTRO DEL NUEVO USUARIO DEL HOGAR");
         System.out.println("------------------------------------");
 
-        String nombreUsuario = "";
         String nombreCompleto = "";
         String correo = "";
+        String telefono = "";
+        String sector = "";
         String contrasenia = "";
-        String metaTexto = "";
-
-        boolean usuarioValido = false;
-        do {
-            System.out.println("Ingrese un nombre de usuario, sin caracteres especiales.");
-            nombreUsuario = scanner.nextLine();
-            usuarioValido = validador.validarUsuario(nombreUsuario);
-        } while (!usuarioValido);
 
         boolean nombreValido = false;
         do {
-            System.out.println("Ingrese un Nombre y Apelledio, (ambos deben empezar con mayuscula y estar separados por un espacio");
+            System.out.println("Ingrese sus Nombres y Apellidos (Ej: Kevin Galeas): ");
             nombreCompleto = scanner.nextLine();
             nombreValido = validador.validarNombre(nombreCompleto);
         } while (!nombreValido);
 
         boolean correoValido = false;
         do {
-            System.out.println("Ingrese su correo electronico");
+            System.out.println("Ingrese su correo electronico: ");
             correo = scanner.nextLine();
             correoValido = validador.validarCorreo(correo);
         } while (!correoValido);
 
+        boolean telefonoValido = false;
+        do {
+            System.out.println("Ingrese su telefono de contacto: ");
+            telefono = scanner.nextLine();
+            telefonoValido = validador.validarSoloNumeros(telefono);
+        } while (!telefonoValido);
+
+        System.out.println("Ingrese su sector o direccion: ");
+        sector = scanner.nextLine();
+
         boolean contraValida = false;
         do {
-            System.out.println("Ingrese una contraseña, de 8 a 16 caracteres ");
+            System.out.println("Ingrese una contrasena (de 8 a 16 caracteres): ");
             contrasenia = scanner.nextLine();
             contraValida = validador.validarContrasenia(contrasenia);
         } while (!contraValida);
 
-        boolean metaValida = false;
-        do {
-            System.out.println("Ingrese su meta de reciclaje en Kg (solo numeros enteros): ");
-            metaTexto = scanner.nextLine();
-            metaValida = validador.validarSoloNumeros(metaTexto);
-        } while (!metaValida);
-
-        double metaKg = Double.parseDouble(metaTexto);
-
-        UsuarioDelHogar nuevoUsuario = new UsuarioDelHogar(nombreUsuario, nombreCompleto, correo, contrasenia, metaKg);
+        UsuarioDelHogar nuevoUsuario = new UsuarioDelHogar(0, nombreCompleto, correo, telefono, sector, contrasenia, "Activo");
 
         System.out.println("Registro completado con exito :)");
-        System.out.println("Bienvenido, " + nuevoUsuario.getNombre() + " Su Cuenta es: (" + nuevoUsuario.getCorreo() + ") con una meta de " + nuevoUsuario.getMetaReciclajeKg() + " Kg se ha creado con exito");
+        System.out.println("Bienvenido, " + nuevoUsuario.getNombresYApellidos() + ". Su cuenta (" + nuevoUsuario.getCorreoElectronico() + ") se ha creado con exito.");
     }
 }

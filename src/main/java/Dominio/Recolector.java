@@ -1,17 +1,32 @@
 package Dominio;
 
-public class Recolector extends Usuario{
-    //SIN PARAMETROS
-    public Recolector (){
+import java.util.Arrays;
+
+public class Recolector extends Usuario {
+
+    private EntregaDeReciclaje[] entregasValidadas;
+
+    public Recolector() {
         super();
     }
-    //CON PARAMETROS
-    public Recolector(String usuario, String nombre, String correo, String contrasenia){
-        super(usuario, nombre, correo, contrasenia);
+
+    public Recolector(EntregaDeReciclaje[] entregasValidadas) {
+        super();
+        this.entregasValidadas = entregasValidadas;
+    }
+
+    public EntregaDeReciclaje[] getEntregasValidadas() {
+        return entregasValidadas;
+    }
+
+    public void setEntregasValidadas(EntregaDeReciclaje[] entregasValidadas) {
+        this.entregasValidadas = entregasValidadas;
     }
 
     @Override
     public String toString() {
-        return "Recolector" + super.toString();
+        return "Recolector{" +
+                "entregasValidadas=" + Arrays.toString(entregasValidadas) +
+                "} " + super.toString();
     }
 }

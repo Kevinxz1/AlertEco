@@ -1,5 +1,4 @@
 import Gui.Console.Menu;
-import test.TestPuntoReciclaje;
 import test.TestRecordatorio;
 import test.TestUsuarioDelHogar;
 

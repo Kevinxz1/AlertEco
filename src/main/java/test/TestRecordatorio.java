@@ -1,16 +1,14 @@
 package test;
 
 import Dominio.Recordatorio;
-import java.time.LocalDateTime;
 
 public class TestRecordatorio {
     public void probarRecordatorio() {
-        System.out.println("TEST CLASE: Recordatorio");
-        Recordatorio testRecordatorio = new Recordatorio(1, "Separar plásticos", "Reciclaje", LocalDateTime.now(), "Semanal");
-        System.out.println("Estado inicial: " + testRecordatorio.toString());
-
-        testRecordatorio.setFrecuencia("Diaria");
-        System.out.println("Frecuencia actualizada  " + testRecordatorio.getFrecuencia());
-        System.out.println("--------------------------------------------------");
+        Recordatorio recordatorio = new Recordatorio("Recoleccion de Plasticos", "2026-11-20", "08:30");
+        System.out.println("--- TEST RECORDATORIO ---");
+        System.out.println(recordatorio.getMensaje());
+        System.out.println(recordatorio.getFecha());
+        System.out.println(recordatorio.getHora());
+        System.out.println("-------------------------");
     }
 }

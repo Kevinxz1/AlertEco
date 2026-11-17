@@ -1,13 +1,17 @@
 import Gui.Console.Menu;
+import test.TestAdministrador;
+import test.TestEntregaDeReciclaje;
+import test.TestLugarDeAcopio;
+import test.TestRecolector;
 import test.TestRecordatorio;
+import test.TestReporteDePuntoCritico;
 import test.TestUsuarioDelHogar;
 
 public class main {
     public static void main(String[] args) {
-
-        System.out.println("==================================================");
-        System.out.println("   TEST DE MÉTODOS Y POJOS ( package DOMINIO)              ");
-        System.out.println("==================================================");
+        System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+        System.out.println("               TEST DE MÉTODOS Y POJOS            ");
+        System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
         TestUsuarioDelHogar pruebaUsuario = new TestUsuarioDelHogar();
         pruebaUsuario.probarUsuarioHogar();
@@ -15,15 +19,24 @@ public class main {
         TestRecordatorio pruebaRecordatorio = new TestRecordatorio();
         pruebaRecordatorio.probarRecordatorio();
 
-        TestRutaRecoleccion pruebaRuta = new TestRutaRecoleccion();
-        pruebaRuta.probarRutaRecoleccion();
+        TestLugarDeAcopio pruebaLugar = new TestLugarDeAcopio();
+        pruebaLugar.probarLugarDeAcopio();
 
-        TestPuntoReciclaje pruebaPunto = new TestPuntoReciclaje();
-        pruebaPunto.probarPuntoReciclaje();
+        TestRecolector pruebaRecolector = new TestRecolector();
+        pruebaRecolector.probarRecolector();
 
-        System.out.println("==================================================");
-        System.out.println("       FIN DE TEST - INICIANDO SISTEMA         ");
-        System.out.println("==================================================");
+        TestAdministrador pruebaAdministrador = new TestAdministrador();
+        pruebaAdministrador.probarAdministrador();
+
+        TestReporteDePuntoCritico pruebaReporte = new TestReporteDePuntoCritico();
+        pruebaReporte.probarReporte();
+
+        TestEntregaDeReciclaje pruebaEntrega = new TestEntregaDeReciclaje();
+        pruebaEntrega.probarEntrega();
+
+        System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+        System.out.println("       FIN DE TEST - Ojala y corra :(             ");
+        System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
         Menu menu = new Menu();
         menu.iniciar();

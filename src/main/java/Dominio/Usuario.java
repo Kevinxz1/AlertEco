@@ -1,6 +1,5 @@
 package Dominio;
 
-
 public abstract class Usuario {
 
     private int idUsuario;
@@ -11,11 +10,9 @@ public abstract class Usuario {
     private String contrasena;
     private String estadoDeLaCuenta;
 
-    // Constructor por defecto sin parametros
     public Usuario() {
     }
 
-    //Constructor con parametros
     public Usuario(int idUsuario, String nombresYApellidos, String correoElectronico,
                    String telefonoDeContacto, String sectorDireccion, String contrasena,
                    String estadoDeLaCuenta) {
@@ -24,11 +21,10 @@ public abstract class Usuario {
         this.correoElectronico = correoElectronico;
         this.telefonoDeContacto = telefonoDeContacto;
         this.sectorDireccion = sectorDireccion;
-        setContrasena(contrasena); /* Utiliza el setter para mantener tu validacion original */
+        setContrasena(contrasena);
         this.estadoDeLaCuenta = estadoDeLaCuenta;
     }
 
-    //get
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -57,7 +53,6 @@ public abstract class Usuario {
         return estadoDeLaCuenta;
     }
 
-    //set
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
@@ -79,7 +74,6 @@ public abstract class Usuario {
     }
 
     public void setContrasena(String contrasena) {
-        /* Validacion interna de longitud adaptada de tu codigo original */
         if (contrasena != null && contrasena.length() >= 8) {
             this.contrasena = contrasena;
         } else {
@@ -91,19 +85,15 @@ public abstract class Usuario {
         this.estadoDeLaCuenta = estadoDeLaCuenta;
     }
 
-
-
     public boolean validarCredenciales(String correo, String contrasena) {
         return this.correoElectronico != null && this.correoElectronico.equals(correo) &&
                 this.contrasena != null && this.contrasena.equals(contrasena);
     }
 
     public void registrarCuenta() {
-
     }
 
     public void actualizarCuenta() {
-
     }
 
     public Usuario consultarCuenta() {
@@ -111,10 +101,8 @@ public abstract class Usuario {
     }
 
     public void eliminarCuenta() {
-
         this.estadoDeLaCuenta = "Inactivo";
     }
-
 
     @Override
     public String toString() {

@@ -64,7 +64,7 @@ public class TestAdministrador {
         System.out.println("Editar lugar2 por referencia a lugarEditado (true): " + admin.editarLugarDeAcopio(lugar2, lugarEditado));
         System.out.println(admin.consultarLugaresDeAcopio());
 
-        System.out.println("[CRUD ELIMINAR (POR REFERENCIA-");
+        System.out.println("CRUD ELIMINAR (POR REFERENCIA");
         System.out.println("Eliminar lugar1 (true): " + admin.eliminarLugarDeAcopio(lugar1));
         System.out.println(admin.consultarLugaresDeAcopio());
 
@@ -77,8 +77,8 @@ public class TestAdministrador {
 
         ReporteDePuntoCritico reporte1 = new ReporteDePuntoCritico(
                 "Acumulación de residuos en esquina", "Resuelto", LocalDateTime.now(), lugarEditado);
-        System.out.println("\nCrear reporte1 con relación 1 a 1 a LugarDeAcopio (true): " + admin.crearReporteResuelto(reporte1));
+        System.out.println("Crear reporte 1 con relación 1 a 1 a LugarDeAcopio (true): " + admin.crearReporteResuelto(reporte1));
         System.out.println(admin.consultarReportesResueltos());
-        System.out.println("----------------------------------------------------");
+
     }
 }

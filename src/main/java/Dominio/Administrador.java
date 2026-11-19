@@ -12,14 +12,14 @@ public class Administrador extends Usuario {
         super();
     }
 
-    // Constructor con los datos heredados de Usuario
+    //Constructor con los datos heredados de Usuario
     public Administrador(int idUsuario, String nombresYApellidos, String correoElectronico,
                          String telefonoDeContacto, String sectorDireccion, String contrasena,
                          String estadoDeLaCuenta) {
         super(idUsuario, nombresYApellidos, correoElectronico, telefonoDeContacto, sectorDireccion, contrasena, estadoDeLaCuenta);
     }
 
-    // Constructor solo con los arreglos de Administrador
+    //Constructor solo con los arreglos de Administrador
     public Administrador(LugarDeAcopio[] lugaresDeAcopioGestionados, GuiaDeReciclaje[] guiasPublicadas,
                          ReporteDePuntoCritico[] reportesResueltos) {
         super();
@@ -28,7 +28,7 @@ public class Administrador extends Usuario {
         this.reportesResueltos = reportesResueltos;
     }
 
-    // Constructor completo (Usuario + Administrador)
+    //Constructor completo (Usuario + Administrador)
     public Administrador(int idUsuario, String nombresYApellidos, String correoElectronico,
                          String telefonoDeContacto, String sectorDireccion, String contrasena,
                          String estadoDeLaCuenta, LugarDeAcopio[] lugaresDeAcopioGestionados,

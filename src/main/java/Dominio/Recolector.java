@@ -65,7 +65,7 @@ public class Recolector extends Usuario {
 
     //Métodos de negocio
 
-    // --- CRUD: Entregas Validadas (Relación 1 a muchos - Agregación) ---
+    //CRUD, entregas Validadas (Relación de Agregación)
     public boolean crearEntregaValidada(EntregaDeReciclaje entrega) {
         if (entrega == null || buscarEntregaValidada(entrega) != null) {
             return false;

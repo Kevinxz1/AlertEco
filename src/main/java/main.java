@@ -1,6 +1,7 @@
 import Gui.Console.Menu;
 import test.TestAdministrador;
 import test.TestEntregaDeReciclaje;
+import test.TestGuiaDeReciclaje;
 import test.TestLugarDeAcopio;
 import test.TestRecolector;
 import test.TestRecordatorio;
@@ -27,6 +28,9 @@ public class main {
 
         TestAdministrador pruebaAdministrador = new TestAdministrador();
         pruebaAdministrador.probarAdministrador();
+
+        TestGuiaDeReciclaje pruebaGuia = new TestGuiaDeReciclaje();
+        pruebaGuia.probarGuiaDeReciclaje();
 
         TestReporteDePuntoCritico pruebaReporte = new TestReporteDePuntoCritico();
         pruebaReporte.probarReporte();
